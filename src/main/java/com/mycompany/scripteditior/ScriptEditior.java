@@ -11,6 +11,8 @@ package com.mycompany.scripteditior;
 public class ScriptEditior {
 
     public static void main(String[] args) {
+        new TextEditor();
         System.out.println("Hello World!");
     }
+
 }
