@@ -12,8 +12,8 @@ public class SettingFormat extends TextFormat {
     
     public boolean bool;
 
-    public SettingFormat(boolean bool, boolean setLeft, String fontType, double leftMargin, double rightMargin, String text) {
-        super(setLeft, fontType, 0, rightMargin, text);
+    public SettingFormat(boolean bool, boolean setLeft, String fontType, boolean isBold, boolean isItalic, double leftMargin, double rightMargin, String text) {
+        super(setLeft, fontType, true, isItalic, 0, rightMargin, text);
         this.bool = bool;
     }
     
