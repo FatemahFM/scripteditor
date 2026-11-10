@@ -18,12 +18,18 @@ public abstract class TextFormat {
     public String text;
 
     public TextFormat(boolean setLeft, String fontType, boolean isBold, boolean isItalic, double leftMargin, double rightMargin, String text) {
-        this.setLeft = setLeft;
+        
+        this.setLeft = true;
+        
+        //this is the style of the text
         this.fontType = "Courier Prime";
         this.isBold = false;
         this.isItalic = false;
+        
+        // this is the location of the text
         this.leftMargin = 1.5;
         this.rightMargin = 1;
+        
         this.text = text;
     }
     
