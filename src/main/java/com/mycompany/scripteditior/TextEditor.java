@@ -6,10 +6,13 @@ package com.mycompany.scripteditior;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.ScrollPaneConstants;
 
 /**
  *
@@ -18,6 +21,7 @@ import javax.swing.JTextArea;
 public class TextEditor extends JFrame implements ActionListener{
     
     JTextArea textarea;
+    JScrollPane scrollpane;
     
     TextEditor() {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -25,7 +29,7 @@ public class TextEditor extends JFrame implements ActionListener{
         this.setSize(500, 400);
         this.setLayout(new FlowLayout());
         
-        //delete this later
+        //delete this later when you make the thing finally fullscreen
         this.setLocationRelativeTo(null);
         
         textarea = new JTextArea();
@@ -33,7 +37,13 @@ public class TextEditor extends JFrame implements ActionListener{
         textarea.setPreferredSize(new Dimension(450,350));
         textarea.setLineWrap(true);
         textarea.setWrapStyleWord(true);
+        textarea.setFont(new Font("Courier Prime", Font.PLAIN, 20));
         
+        scrollpane = new JScrollPane(textarea);
+        scrollpane.setPreferredSize(new Dimension(450,350));
+        scrollpane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        
+        this.add(scrollpane);
         this.setVisible(true);
     }
 
