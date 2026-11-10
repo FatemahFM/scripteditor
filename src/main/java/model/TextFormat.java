@@ -11,15 +11,23 @@ package model;
 public abstract class TextFormat {
     public boolean setLeft;
     public String fontType;
-    public int leftMargin;
-    public int rightMargin;
+    public boolean isBold;
+    public boolean isItalic;
+    public double leftMargin;
+    public double rightMargin;
     public String text;
 
-    public TextFormat(boolean setLeft, String fontType, int leftMargin, int rightMargin, String text) {
+    public TextFormat(boolean setLeft, String fontType, boolean isBold, boolean isItalic, double leftMargin, double rightMargin, String text) {
         this.setLeft = setLeft;
-        this.fontType = fontType;
-        this.leftMargin = leftMargin;
-        this.rightMargin = rightMargin;
+        this.fontType = "Courier Prime";
+        this.isBold = false;
+        this.isItalic = false;
+        this.leftMargin = 1.5;
+        this.rightMargin = 1;
         this.text = text;
+    }
+    
+    public String toString() {
+        return text;
     }
 }
